@@ -20,13 +20,13 @@ const Details = () => {
         <div>
             <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12">
                 {/* Left: Image */}
-                <div className="bg-gray-50 rounded-3xl p-10 flex items-center justify-center">
+                <div className="border border-gray-200 rounded-3xl p-10 flex items-center justify-center">
                     <Image
-                        src={foundedData.image
-}
+                        src={foundedData.image}
                         alt={foundedData.name}
-                        height={0}
-                        width={0}
+                        height={800}
+                        width={800}
+                        title={foundedData.name}
                         className="max-h-125 object-contain hover:scale-105 transition-transform duration-500"
                     />
                 </div>
