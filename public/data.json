@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/mD4m3p1x/sunglasses.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Classic Leather Wallet",
+    "brand": "Hide & Co",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Genuine leather bi-fold wallet with RFID protection and slim profile.",
+    "image": "https://i.postimg.cc/8PzZ0G9r/wallet.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Wireless Noise Cancelling Headphones",
+    "brand": "AudioTech",
+    "price": 199,
+    "rating": 4.9,
+    "stock": 15,
+    "description": "Premium wireless headphones with 40-hour battery life and superior noise cancellation.",
+    "image": "https://i.postimg.cc/qR8v7f2b/headphones.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "Stainless Steel Water Bottle",
+    "brand": "HydroPeak",
+    "price": 28,
+    "rating": 4.6,
+    "stock": 50,
+    "description": "Vacuum insulated bottle that keeps drinks cold for 24 hours or hot for 12.",
+    "image": "https://i.postimg.cc/Kj7X3Xy1/bottle.png",
+    "category": "Fitness"
+  },
+  {
+    "id": 5,
+    "name": "Minimalist Analog Watch",
+    "brand": "Tempo",
+    "price": 85,
+    "rating": 4.5,
+    "stock": 8,
+    "description": "Sleek analog watch with a mesh stainless steel strap and Japanese movement.",
+    "image": "https://i.postimg.cc/G2nLpS4q/watch.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Ergonomic Mechanical Keyboard",
+    "brand": "KeyPro",
+    "price": 120,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "RGB backlit mechanical keyboard with blue switches for a tactile typing experience.",
+    "image": "https://i.postimg.cc/vH4fM6Y9/keyboard.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 7,
+    "name": "Organic Cotton Hoodie",
+    "brand": "EcoWear",
+    "price": 55,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Soft, sustainable organic cotton hoodie with a relaxed fit and fleece lining.",
+    "image": "https://i.postimg.cc/9MQ7W3zX/hoodie.png",
+    "category": "Apparel"
+  },
+  {
+    "id": 8,
+    "name": "Portable Smart Projector",
+    "brand": "Lumina",
+    "price": 299,
+    "rating": 4.7,
+    "stock": 5,
+    "description": "Mini HD projector with built-in speakers and streaming app support.",
+    "image": "https://i.postimg.cc/L8XNfB1S/projector.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 9,
+    "name": "Yoga Mat with Alignment Lines",
+    "brand": "ZenFlow",
+    "price": 35,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "Eco-friendly TPE yoga mat with non-slip texture and posture alignment guides.",
+    "image": "https://i.postimg.cc/FHWyWf6K/yogamat.png",
+    "category": "Fitness"
+  },
+  {
+    "id": 10,
+    "name": "Professional Chef's Knife",
+    "brand": "Culina",
+    "price": 70,
+    "rating": 4.8,
+    "stock": 18,
+    "description": "High-carbon stainless steel 8-inch blade with an ergonomic pakkawood handle.",
+    "image": "https://i.postimg.cc/brL5M9T3/knife.png",
+    "category": "Kitchen"
+  }
+]
