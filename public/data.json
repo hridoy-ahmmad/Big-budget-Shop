@@ -7,7 +7,7 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Stylish UV protection sunglasses perfect for summer outings.",
-    "image": "https://i.postimg.cc/mD4m3p1x/sunglasses.png",
+    "image": "/hero.jpeg",
     "category": "Accessories"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.8,
     "stock": 25,
     "description": "Genuine leather bi-fold wallet with RFID protection and slim profile.",
-    "image": "https://i.postimg.cc/8PzZ0G9r/wallet.png",
+    "image": "/hero.jpeg",
     "category": "Accessories"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.9,
     "stock": 15,
     "description": "Premium wireless headphones with 40-hour battery life and superior noise cancellation.",
-    "image": "https://i.postimg.cc/qR8v7f2b/headphones.png",
+    "image": "/hero.jpeg",
     "category": "Electronics"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "stock": 50,
     "description": "Vacuum insulated bottle that keeps drinks cold for 24 hours or hot for 12.",
-    "image": "https://i.postimg.cc/Kj7X3Xy1/bottle.png",
+    "image": "/hero.jpeg",
     "category": "Fitness"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.5,
     "stock": 8,
     "description": "Sleek analog watch with a mesh stainless steel strap and Japanese movement.",
-    "image": "https://i.postimg.cc/G2nLpS4q/watch.png",
+    "image": "/hero.jpeg",
     "category": "Accessories"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.8,
     "stock": 12,
     "description": "RGB backlit mechanical keyboard with blue switches for a tactile typing experience.",
-    "image": "https://i.postimg.cc/vH4fM6Y9/keyboard.png",
+    "image": "/hero.jpeg",
     "category": "Electronics"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.4,
     "stock": 30,
     "description": "Soft, sustainable organic cotton hoodie with a relaxed fit and fleece lining.",
-    "image": "https://i.postimg.cc/9MQ7W3zX/hoodie.png",
+    "image": "/hero.jpeg",
     "category": "Apparel"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "stock": 5,
     "description": "Mini HD projector with built-in speakers and streaming app support.",
-    "image": "https://i.postimg.cc/L8XNfB1S/projector.png",
+    "image": "/hero.jpeg",
     "category": "Electronics"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.9,
     "stock": 20,
     "description": "Eco-friendly TPE yoga mat with non-slip texture and posture alignment guides.",
-    "image": "https://i.postimg.cc/FHWyWf6K/yogamat.png",
+    "image": "/hero.jpeg",
     "category": "Fitness"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.8,
     "stock": 18,
     "description": "High-carbon stainless steel 8-inch blade with an ergonomic pakkawood handle.",
-    "image": "https://i.postimg.cc/brL5M9T3/knife.png",
+    "image": "/hero.jpeg",
     "category": "Kitchen"
   }
 ]
