@@ -12,7 +12,6 @@ const Navbar = () => {
         { name: "My Profile", href: "/profile" },
 
     ];
-
     return (
         <nav className="bg-white shadow-md  w-full ">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,10 +19,9 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="text-2xl font-bold text-blue-600">
-                            BRAND
+                            BIG BUDGET
                         </Link>
                     </div>
-
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8">
                         {navLinks.map((link) => (
