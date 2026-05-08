@@ -59,7 +59,7 @@ const Card = ({ d }) => {
                     </div>
 
                     {/* Button */}
-                    <Link href={'/'} className="flex items-center gap-2  px-2 py-1 rounded-md transition-all active:scale-95 bg-gray-200 border border-gray-300">
+                    <Link href={`/details/${d.id}`} className="flex items-center gap-2  px-2 py-1 rounded-md transition-all active:scale-95 bg-gray-200 border border-gray-300">
                         Details
                     </Link>
                 </div>
