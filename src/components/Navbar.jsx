@@ -37,7 +37,7 @@ const Navbar = () => {
                     <div className="flex gap-3 items-center">
                         <p className="h-8 w-8 rounded-full bg-green-300"></p>
                         <div>
-                            <p>login or register</p>
+                            <Link href={'/signup'}>register</Link>
                         </div>
                     </div>
 
