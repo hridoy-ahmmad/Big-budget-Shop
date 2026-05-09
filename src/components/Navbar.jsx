@@ -10,14 +10,13 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", href: "/" },
         { name: "My Profile", href: "/profile" },
-
     ];
     return (
         <nav className="bg-white shadow-md  w-full ">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center">
+                    <div className="shrink-0 flex items-center">
                         <Link href="/" className="text-2xl font-bold text-blue-600">
                             BIG BUDGET
                         </Link>
@@ -36,11 +35,12 @@ const Navbar = () => {
                     </div>
                     <div className="flex gap-3 items-center">
                         <p className="h-8 w-8 rounded-full bg-green-300"></p>
-                        <div>
-                            <Link href={'/signup'}>register</Link>
+                        <div className="flex items-center gap-2">
+                            <Link className="py-2 px-3 border uppercase font-semibold border-gray-200 rounded-xl" href={'/signin'}>Login</Link>
+                            <p>Or</p>
+                            <Link className="py-2 px-3 border uppercase font-semibold border-gray-200 rounded-xl" href={'/signup'}>register</Link>
                         </div>
                     </div>
-
                     {/* Mobile Button */}
                     <div className="md:hidden flex items-center">
                         <button
@@ -52,7 +52,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden bg-white border-t border-gray-100">
@@ -70,7 +69,7 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-          
+
         </nav>
     );
 };
