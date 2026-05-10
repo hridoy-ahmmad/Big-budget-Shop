@@ -1,4 +1,5 @@
 "use client"
+import { UpdateProfle } from "@/components/UpdateProfile";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 
@@ -7,7 +8,7 @@ const MyProfile = () => {
     const userData = data.data?.user
     return (
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl border border-gray-100 my-4">
-            <div className="md:flex items-center p-6">
+            <div className="flex flex-col  justify-center  items-center p-6">
                 <div className="md:shrink-0 flex justify-center">
                     <div className="relative h-24 w-24">
                         <Image
@@ -18,12 +19,12 @@ const MyProfile = () => {
                         />
                     </div>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                    <div className="flex items-center justify-center md:justify-start gap-2">
+                <div className="my-4  text-center">
+                    <div className="flex items-center justify-center  gap-2">
                         <h2 className="text-xl font-bold text-gray-900 tracking-tight">
                             {userData?.name}
                         </h2>
-                       
+
                     </div>
                     <p className="text-gray-500 text-sm mb-2">{userData?.email}</p>
                     <div className="mt-2 pt-2 border-t border-gray-100">
@@ -32,6 +33,7 @@ const MyProfile = () => {
                         </span>
                     </div>
                 </div>
+                <UpdateProfle />
             </div>
         </div>
     );

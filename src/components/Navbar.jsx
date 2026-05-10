@@ -47,7 +47,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex gap-3 items-center">
                         {
-                            userData ? <div className="flex gap-2">
+                            userData ? <div className="flex items-center gap-2">
                                 <div className="relative  gap-2 h-12 w-12">
                                     <Image
                                         className="rounded-full object-cover border-2 border-blue-500 p-1"
