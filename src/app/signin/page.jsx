@@ -107,7 +107,7 @@ export default function SignInPage() {
                     </Button>
                 </div>
             </Form>
-            <p className="text-center">Or</p>
+            <p className="text-center font-bold my-5">Or</p>
             <div className="">
                 <Button onClick={handleGoogleSignIn} className={'w-full flex justify-center items-center gap-2 my-5  bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md active:transform active:scale-[0.98'}><FaGoogle /> Sign In With Google</Button>
             </div>
