@@ -3,16 +3,16 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { useRouter } from "next/navigation";
+
 import { FaGoogle } from "react-icons/fa";
 
 
-
 export default function SignUpPage() {
+    const router = useRouter()
     const onSubmit = async (e) => {
         e.preventDefault();
-
         const formData = new FormData(e.currentTarget);
-
         const name = formData.get("name");
         const image = formData.get("image");
         const email = formData.get("email");
@@ -35,6 +35,8 @@ export default function SignUpPage() {
         } catch (err) {
             console.error("Server Crash:", err);
         }
+        await authClient.signOut();
+        router.push('/signin')
     };
     const handleGoogleSignUp = async () => {
         await authClient.signIn.social({
@@ -60,7 +62,7 @@ export default function SignUpPage() {
                 </TextField>
 
                 {/* Image URL Field */}
-                <TextField isRequired name="image" type="text" className="flex flex-col gap-1.5">
+                <TextField isRequired name="image" type="url" className="flex flex-col gap-1.5">
                     <Label className="text-sm font-semibold text-slate-700 ml-1">Image URL</Label>
                     <Input
                         placeholder="https://example.com/photo.jpg"

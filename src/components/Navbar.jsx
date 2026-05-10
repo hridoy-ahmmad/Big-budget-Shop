@@ -5,15 +5,17 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Install lucide-react for icons
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
-import { Avatar, Button } from "@heroui/react";
+import { Button } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-
+    const router = useRouter()
     const data = authClient.useSession()
     const userData = data.data?.user
     console.log(userData);
     const signOut = async () => {
         await authClient.signOut();
+        router.push('/signin');
     }
 
     const [isOpen, setIsOpen] = useState(false);
