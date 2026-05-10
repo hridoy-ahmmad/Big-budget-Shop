@@ -1,21 +1,15 @@
 import Card from "@/components/Card";
 import Hero from "@/components/Hero";
 import Tips from "@/components/Tips";
+import { getData } from "@/lib/data";
 import Link from "next/link";
 
 
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/data.json', {
-    cache: 'no-store'
-  })
-  return res.json()
 
-}
- const data = await getData()
-
-const products = data.slice(0, 4)
 
 export default async function Home() {
+  const data = await getData()
+  const products = data.slice(0, 4)
   return (
     <div >
       <Hero />
