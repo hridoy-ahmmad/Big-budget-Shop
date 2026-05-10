@@ -8,9 +8,9 @@ const getData = async () => {
     return res.json()
 
 }
-const data = await getData()
 
-const AllProducts = () => {
+const AllProducts =async () => {
+    const data = await getData()
     return (
         <div>
             <p className="text-orange-500 font-bold uppercase mb-3 text-center my-10 text-3xl">

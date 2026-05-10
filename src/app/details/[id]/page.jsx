@@ -11,8 +11,8 @@ const getData = async () => {
     return res.json()
 
 }
-const data = await getData()
 
+const data = await getData()
 const Details = () => {
     const { id } = useParams()
     const foundedData = data.find(item => item.id === Number(id))
