@@ -54,7 +54,7 @@ const Details = () => {
                     <button className="bg-gray-900 text-white py-5 rounded-full font-bold text-xl hover:bg-orange-600 transition-colors shadow-xl active:scale-95">
                         Add to Cart — ${foundedData.price}
                     </button>
-                <Features />
+                    <Features />
                 </div>
             </div>
         </div>
