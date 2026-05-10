@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { FaGoogle } from "react-icons/fa";
 
 
 
@@ -20,7 +21,7 @@ export default function SignInPage() {
             const { data, error } = await authClient.signIn.email({
                 email,
                 password,
-                callbackURL:'/'
+                callbackURL: '/'
             });
 
             if (error) {
@@ -33,6 +34,11 @@ export default function SignInPage() {
             console.error("Server Crash:", err);
         }
     };
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
     return (
         <Card className="mx-auto w-full my-10 max-w-lg border border-slate-200 bg-white p-8 mt-10 shadow-xl rounded-2xl">
@@ -101,6 +107,10 @@ export default function SignInPage() {
                     </Button>
                 </div>
             </Form>
+            <p className="text-center">Or</p>
+            <div className="">
+                <Button onClick={handleGoogleSignIn} className={'w-full flex justify-center items-center gap-2 my-5  bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md active:transform active:scale-[0.98'}><FaGoogle /> Sign In With Google</Button>
+            </div>
         </Card>
     );
 }

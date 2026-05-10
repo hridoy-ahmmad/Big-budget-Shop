@@ -4,5 +4,4 @@ export const getData = async () => {
         cache: 'no-store'
     })
     return res.json()
-
 }
