@@ -7,6 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
     const router = useRouter()
@@ -16,6 +17,16 @@ const Navbar = () => {
     const signOut = async () => {
         await authClient.signOut();
         router.push('/signin');
+        toast.success('Signed out successfully', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     }
 
     const [isOpen, setIsOpen] = useState(false);

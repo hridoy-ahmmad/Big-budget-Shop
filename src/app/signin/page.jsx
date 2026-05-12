@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 
@@ -12,31 +13,55 @@ export default function SignInPage() {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
-
-
         const email = formData.get("email");
         const password = formData.get("password");
 
-        try {
-            const { data, error } = await authClient.signIn.email({
-                email,
-                password,
-                callbackURL: '/'
+        const { data, error } = await authClient.signIn.email({
+            email,
+            password,
+            callbackURL: '/',
+        });
+
+        if (error) {
+            toast.error('Invalid email or password', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
             });
-
-            if (error) {
-                console.error("Sign-in Error:", error);
-                return;
-            }
-
-            console.log("Success:", data);
-        } catch (err) {
-            console.error("Server Crash:", err);
+            return;
+        } else {
+            toast.success('Signed in successfully', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         }
-    };
+
+    }
+
     const handleGoogleSignIn = async () => {
         await authClient.signIn.social({
             provider: "google",
+        });
+        toast.success('Signed in successfully', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
         });
     }
 
@@ -53,12 +78,7 @@ export default function SignInPage() {
                     name="email"
                     type="email"
                     className="flex flex-col gap-1.5"
-                    validate={(value) => {
-                        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-                            return "Please enter a valid email address";
-                        }
-                        return null;
-                    }}
+
                 >
                     <Label className="text-sm font-semibold text-slate-700 ml-1">Email</Label>
                     <Input
@@ -74,12 +94,7 @@ export default function SignInPage() {
                     name="password"
                     type="password"
                     className="flex flex-col gap-1.5"
-                    validate={(value) => {
-                        if (value.length < 8) return "Password must be at least 8 characters";
-                        if (!/[A-Z]/.test(value)) return "Need one uppercase letter";
-                        if (!/[0-9]/.test(value)) return "Need one number";
-                        return null;
-                    }}
+
                 >
                     <Label className="text-sm font-semibold text-slate-700 ml-1">Password</Label>
                     <Input
@@ -111,6 +126,7 @@ export default function SignInPage() {
             <div className="">
                 <Button onClick={handleGoogleSignIn} className={'w-full flex justify-center items-center gap-2 my-5  bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md active:transform active:scale-[0.98]'}><FaGoogle /> Sign In With Google</Button>
             </div>
+
         </Card>
     );
 }

@@ -6,6 +6,7 @@ import { Button, Card, Description, FieldError, Form, Input, Label, TextField } 
 import { useRouter } from "next/navigation";
 
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 export default function SignUpPage() {
@@ -37,10 +38,30 @@ export default function SignUpPage() {
         }
         await authClient.signOut();
         router.push('/signin')
+        toast.success('Successfully created account', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     };
     const handleGoogleSignUp = async () => {
         await authClient.signIn.social({
             provider: "google",
+        });
+        toast.success('Successfully created account', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
         });
     }
 
