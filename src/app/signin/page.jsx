@@ -46,7 +46,6 @@ export default function SignInPage() {
                 theme: "dark",
             });
         }
-
     }
 
     const handleGoogleSignIn = async () => {
