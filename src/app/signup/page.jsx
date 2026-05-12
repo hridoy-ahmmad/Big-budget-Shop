@@ -50,19 +50,24 @@ export default function SignUpPage() {
         });
     };
     const handleGoogleSignUp = async () => {
-        await authClient.signIn.social({
+        const res = await authClient.signIn.social({
             provider: "google",
         });
-        toast.success('Successfully created account', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
+        if (res.data) {
+            toast.success('Successfully created account', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } else if (res.error) {
+            console.log('')
+        }
+
     }
 
     return (
