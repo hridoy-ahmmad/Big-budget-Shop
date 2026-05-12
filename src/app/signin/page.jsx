@@ -50,19 +50,32 @@ export default function SignInPage() {
     }
 
     const handleGoogleSignIn = async () => {
-        await authClient.signIn.social({
+        const res = await authClient.signIn.social({
             provider: "google",
         });
-        toast.success('Signed in successfully', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
+        if (res.data) {
+            toast.success('Signed in successfully', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } else if (res.error) {
+            toast.error('Something is wrong', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        }
     }
 
     return (
