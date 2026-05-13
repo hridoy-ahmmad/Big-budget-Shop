@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <div >
       <Hero />
-      <div className="grid grid-cols-4 container mx-auto gap-5 my-5">
+      <div className="grid p-5 md:grid-cols-3 lg:grid-cols-4 container mx-auto gap-5 my-5">
         {
           products.map(d =>
             <Card key={d.id} d={d} />)

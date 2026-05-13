@@ -12,7 +12,7 @@ export function UpdateProfle() {
         e.preventDefault()
         const name = e.target.name.value
         const image = e.target.image.value
-        console.log(name, image);
+        
         await authClient.updateUser({
             image,
             name
@@ -36,11 +36,11 @@ export function UpdateProfle() {
                         <Modal.Body className="p-6">
                             <Surface variant="default">
                                 <form onSubmit={updateProfile} className="flex flex-col gap-4">
-                                    <TextField className="w-full" name="name" type="text">
+                                    <TextField className="w-full" isRequired name="name" type="text">
                                         <Label>Name</Label>
                                         <Input placeholder="Enter your name" />
                                     </TextField>
-                                    <TextField className="w-full" name="image" type="url">
+                                    <TextField className="w-full" isRequired name="image" type="url">
                                         <Label>Image</Label>
                                         <Input placeholder="Image link" />
                                     </TextField>

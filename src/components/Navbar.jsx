@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // Install lucide-react for icons
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { Button } from "@heroui/react";
@@ -29,7 +27,7 @@ const Navbar = () => {
         });
     }
 
-    const [isOpen, setIsOpen] = useState(false);
+
 
     const navLinks = [
         { name: "Home", href: "/" },
@@ -61,16 +59,18 @@ const Navbar = () => {
                     <div className="flex gap-3 items-center">
                         {
                             userData ? <div className="flex items-center gap-2">
-                                <div className="relative  gap-2 h-12 w-12">
-                                    <Image
-                                        className="rounded-full object-cover border-2 border-blue-500 p-1"
-                                        src={userData?.image}
-                                        alt={userData?.name}
-                                        referrerPolicy="no-referrer"
-                                        fill
-                                    />
+                                <Link href={'/profile'}>
+                                    <div className="relative  gap-2 h-12 w-12">
+                                        <Image
+                                            className="rounded-full object-cover border-2 border-blue-500 p-1"
+                                            src={userData?.image}
+                                            alt={userData?.name}
+                                            referrerPolicy="no-referrer"
+                                            fill
+                                        />
 
-                                </div>
+                                    </div>
+                                </Link>
                                 <Button onClick={signOut} className={'font-semibold cursor-pointer'}>Sign out</Button>
                             </div>
                                 :
@@ -81,34 +81,8 @@ const Navbar = () => {
                                 </div>
                         }
                     </div>
-                    {/* Mobile Button */}
-                    <div className="md:hidden flex items-center">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-700 hover:text-blue-600 focus:outline-none"
-                        >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
-                        </button>
-                    </div>
                 </div>
             </div>
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md text-base font-medium"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            )}
 
         </nav>
     );
