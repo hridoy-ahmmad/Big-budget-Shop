@@ -2,15 +2,16 @@ import { ShoppingCart, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Lottie from "lottie-react";
+
+
 
 const Card = ({ d }) => {
     return (
         <div className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 flex flex-col">
 
-            {/* Product Image */}
             <div className="relative bg-gray-50 h-56 overflow-hidden">
 
-                {/* Category */}
                 <span className="absolute top-4 left-4 z-20 bg-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-indigo-600 shadow">
                     {d.category}
                 </span>
@@ -22,13 +23,10 @@ const Card = ({ d }) => {
                     height={500}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 relative"
                 />
-                {/* <div className='absolute inset-0 bg-black/40'></div> */}
             </div>
 
-            {/* Content */}
             <div className="p-5 flex flex-col flex-grow">
 
-                {/* Name + Rating */}
                 <div className="flex items-start justify-between gap-3 mb-2">
 
                     <h2 className="font-extrabold text-gray-900 group-hover:text-indigo-600 transition">
@@ -43,11 +41,8 @@ const Card = ({ d }) => {
                     </div>
                 </div>
 
-
-                {/* Bottom */}
                 <div className="flex items-center justify-between mt-auto">
 
-                    {/* Price */}
                     <div>
                         <p className="text-gray-400 text-xs line-through">
                             ${(d.price + 40).toFixed(2)}
@@ -58,15 +53,19 @@ const Card = ({ d }) => {
                         </h3>
                     </div>
 
-                    {/* Button */}
-                    <Link href={`/details/${d.id}`} className="flex items-center gap-2  px-2 py-1 rounded-md transition-all active:scale-95 bg-gray-200 border border-gray-300">
+                    <Link
+                        href={`/details/${d.id}`}
+                        className="flex items-center gap-2 px-3 py-2 rounded-md transition-all active:scale-95 bg-gray-200 border border-gray-300"
+                    >
+                        <div className="w-6 h-6">
+            
+                        </div>
+
                         Details
                     </Link>
                 </div>
             </div>
         </div>
-
-
     );
 };
 
